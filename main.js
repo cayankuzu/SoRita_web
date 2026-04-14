@@ -4,22 +4,19 @@ if ("IntersectionObserver" in window && revealNodes.length > 0) {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          return;
-        }
-
+        if (!entry.isIntersecting) return;
         entry.target.classList.add("is-visible");
         observer.unobserve(entry.target);
       });
     },
     {
-      threshold: 0.14,
-      rootMargin: "0px 0px -36px 0px",
+      threshold: 0.16,
+      rootMargin: "0px 0px -32px 0px",
     },
   );
 
   revealNodes.forEach((node, index) => {
-    node.style.transitionDelay = `${Math.min(index * 55, 240)}ms`;
+    node.style.transitionDelay = `${Math.min(index * 45, 220)}ms`;
     observer.observe(node);
   });
 } else {
