@@ -22,6 +22,6 @@ Bu klasor, GitHub Pages veya benzeri bir statik hosting uzerine yuklenebilecek h
 
 ## Yayin oncesi kontrol
 
- - Iletisim alanlarinda kullanilan `iletisim@ornek.com` placeholder bilgisini gercek adresle degistir.
+ - Iletisim adresi olarak `memodee333@gmail.com` bilgisini kullan.
 - Gerekirse veri sorumlusu kimligini acik yaz.
 - Hukuki metinleri bir uzmanla son kez gozden gecir.
