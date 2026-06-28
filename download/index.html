@@ -226,96 +226,13 @@
         flex: 0 0 auto;
       }
 
-      .action-row {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .action-icon {
-        width: 22px;
-        height: 22px;
-        flex: 0 0 auto;
-        color: var(--ink);
-      }
-
-      .action-disabled {
-        background: #f5f7fb;
-      }
-
-      .action-disabled .action-title,
-      .action-disabled .action-copy {
-        color: #667489;
-      }
-
-      .home-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        color: var(--muted);
-        font-size: 14px;
-        font-weight: 700;
-        text-decoration: none;
-      }
-
-      .actions {
-        padding: 28px;
-        display: grid;
-        gap: 14px;
-      }
-
-      .action {
-        display: block;
-        padding: 18px 20px;
-        border-radius: 22px;
-        text-decoration: none;
-        background: var(--card-strong);
-        border: 1px solid var(--line);
-        color: inherit;
-      }
-
-      .action.primary {
-        background: linear-gradient(135deg, rgba(61, 124, 255, 0.12), rgba(30, 207, 145, 0.12));
-      }
-
-      .action-label {
-        display: block;
-        margin-bottom: 6px;
-        color: var(--muted);
-        font-size: 12px;
-        font-weight: 800;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-
-      .action-title {
-        display: block;
-        font-size: 22px;
-        font-weight: 800;
-      }
-
-      .action-copy {
-        display: block;
-        margin-top: 10px;
-        color: var(--muted);
-        line-height: 1.7;
-      }
-
-      .footnote {
-        margin: 0;
-        color: var(--muted);
-        font-size: 13px;
-        line-height: 1.7;
-      }
-
       @media (max-width: 680px) {
         .shell {
           width: min(100% - 20px, 760px);
           padding-top: 20px;
         }
 
-        .intro,
-        .actions {
+        .intro {
           padding: 22px;
         }
 
@@ -381,45 +298,6 @@
           </div>
         </article>
 
-        <section class="panel actions">
-          <a
-            class="action primary"
-            href="https://apps.apple.com/tr/app/sorita-app/id6762198781?l=tr"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span class="action-row">
-              <svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  fill="currentColor"
-                  d="M16.64 13.02c.02 2.21 1.95 2.95 1.97 2.96-.02.05-.31 1.08-1.03 2.14-.62.91-1.28 1.82-2.29 1.84-1 .02-1.32-.59-2.46-.59s-1.5.57-2.43.61c-.97.04-1.71-.98-2.34-1.89-1.28-1.85-2.25-5.22-.94-7.49.65-1.13 1.82-1.85 3.09-1.87.96-.02 1.87.65 2.46.65.59 0 1.7-.8 2.86-.68.49.02 1.86.2 2.74 1.5-.07.04-1.64.95-1.63 2.82ZM14.87 5.94c.52-.63.88-1.51.78-2.39-.75.03-1.66.5-2.2 1.13-.48.56-.9 1.45-.79 2.3.84.06 1.68-.43 2.21-1.04Z"
-                />
-              </svg>
-              <span class="action-label">iOS</span>
-            </span>
-            <span class="action-title">iOS icin indir</span>
-            <span class="action-copy">SoRita iPhone surumunu dogrudan App Store uzerinden ac.</span>
-          </a>
-
-          <div class="action action-disabled" aria-disabled="true">
-            <span class="action-row">
-              <svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  fill="currentColor"
-                  d="M3.61 2.99 13.8 13.18l3.51-3.51L3.61 2.99Zm14.84 7.33-3.48 3.48 3.48 3.48c1.44-.79 2.43-1.98 2.43-3.48 0-1.5-.99-2.69-2.43-3.48ZM2.99 3.61A3.42 3.42 0 0 0 2 6v12c0 1.01.39 1.92 1.03 2.61l9.87-9.87L2.99 3.61Zm11.18 11.18-9.88 9.88A3.39 3.39 0 0 0 6 22l11.26-6.5-3.09-3.09Z"
-                />
-              </svg>
-              <span class="action-label">Android</span>
-            </span>
-            <span class="action-title">Android icin indir</span>
-            <span class="action-copy">Pek yakinda Play Store'da.</span>
-          </div>
-
-          <p class="footnote">
-            Bu sayfa GitHub Pages yayinina uygundur ve paylasilan linkler icin sabit hedef olarak kullanilir.
-          </p>
-          <a class="home-link" href="../index.html">GitHub Pages ana sayfasina gec</a>
-        </section>
       </section>
     </main>
   </body>
