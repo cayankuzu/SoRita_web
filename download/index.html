@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SoRita | Indir</title>
+    <title>SoRita | iOS ve Android</title>
     <meta
       name="description"
-      content="SoRita indirme ve tanitim sayfasi. Uygulamadan paylasilan sabit baglanti bu sayfaya iner."
+      content="SoRita iOS ve Android indirme sayfasi. Uygulamadan paylasilan sabit baglanti bu sayfaya iner."
     />
     <meta property="og:title" content="SoRita | Sosyal Harita" />
     <meta
       property="og:description"
-      content="SoRita'yi indir ve sosyal haritaya katil."
+      content="SoRita iOS surumunu indir, Android surumu icin Play Store yayinini takip et."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://cayankuzu.github.io/SoRita_web/download/" />
@@ -193,13 +193,68 @@
       }
 
       .card-cta {
-        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 62px;
         padding: 18px 22px;
         border-radius: 24px;
         background: linear-gradient(135deg, #214f94, #153866);
         color: #fff;
         font-size: 16px;
         font-weight: 800;
+        text-decoration: none;
+      }
+
+      .card-actions {
+        flex: 0 0 232px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .card-cta.disabled {
+        background: #e7ebf3;
+        color: #7a889d;
+        cursor: default;
+        pointer-events: none;
+      }
+
+      .cta-icon {
+        width: 20px;
+        height: 20px;
+        flex: 0 0 auto;
+      }
+
+      .action-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .action-icon {
+        width: 22px;
+        height: 22px;
+        flex: 0 0 auto;
+        color: var(--ink);
+      }
+
+      .action-disabled {
+        background: #f5f7fb;
+      }
+
+      .action-disabled .action-title,
+      .action-disabled .action-copy {
+        color: #667489;
+      }
+
+      .home-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 700;
         text-decoration: none;
       }
 
@@ -268,6 +323,11 @@
           flex-wrap: wrap;
         }
 
+        .card-actions {
+          width: 100%;
+          flex-basis: 100%;
+        }
+
         .card-cta {
           width: 100%;
           text-align: center;
@@ -287,8 +347,8 @@
           <p class="eyebrow">Paylasilan baglanti</p>
           <h1>SoRita'yi indir.</h1>
           <p class="lead">
-            Uygulamadan paylasilan baglanti buraya iner. Bu sayfa sadece SoRita'yi indirmek
-            ve resmi GitHub Pages yayinina gecmek icin sabit hedef olarak kullanilir.
+            Uygulamadan paylasilan baglanti buraya iner. Buradan iOS surumunu acabilir,
+            Android surumu icin Play Store yayininin yaklasmasini takip edebilirsin.
           </p>
 
           <div class="link-card">
@@ -298,7 +358,26 @@
               <h2 class="card-title">SoRita</h2>
               <p class="card-subtitle">Sosyal Harita</p>
             </div>
-            <a class="card-cta" href="https://apps.apple.com/tr/app/sorita-app/id6762198781?l=tr" target="_blank" rel="noreferrer">Indir</a>
+            <div class="card-actions">
+              <a class="card-cta" href="https://apps.apple.com/tr/app/sorita-app/id6762198781?l=tr" target="_blank" rel="noreferrer">
+                <svg class="cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M16.64 13.02c.02 2.21 1.95 2.95 1.97 2.96-.02.05-.31 1.08-1.03 2.14-.62.91-1.28 1.82-2.29 1.84-1 .02-1.32-.59-2.46-.59s-1.5.57-2.43.61c-.97.04-1.71-.98-2.34-1.89-1.28-1.85-2.25-5.22-.94-7.49.65-1.13 1.82-1.85 3.09-1.87.96-.02 1.87.65 2.46.65.59 0 1.7-.8 2.86-.68.49.02 1.86.2 2.74 1.5-.07.04-1.64.95-1.63 2.82ZM14.87 5.94c.52-.63.88-1.51.78-2.39-.75.03-1.66.5-2.2 1.13-.48.56-.9 1.45-.79 2.3.84.06 1.68-.43 2.21-1.04Z"
+                  />
+                </svg>
+                <span>iOS icin indir</span>
+              </a>
+              <span class="card-cta disabled">
+                <svg class="cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M3.61 2.99 13.8 13.18l3.51-3.51L3.61 2.99Zm14.84 7.33-3.48 3.48 3.48 3.48c1.44-.79 2.43-1.98 2.43-3.48 0-1.5-.99-2.69-2.43-3.48ZM2.99 3.61A3.42 3.42 0 0 0 2 6v12c0 1.01.39 1.92 1.03 2.61l9.87-9.87L2.99 3.61Zm11.18 11.18-9.88 9.88A3.39 3.39 0 0 0 6 22l11.26-6.5-3.09-3.09Z"
+                  />
+                </svg>
+                <span>Pek yakinda Play Store'da</span>
+              </span>
+            </div>
           </div>
         </article>
 
@@ -309,20 +388,37 @@
             target="_blank"
             rel="noreferrer"
           >
-            <span class="action-label">iOS</span>
-            <span class="action-title">App Store'u ac</span>
+            <span class="action-row">
+              <svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M16.64 13.02c.02 2.21 1.95 2.95 1.97 2.96-.02.05-.31 1.08-1.03 2.14-.62.91-1.28 1.82-2.29 1.84-1 .02-1.32-.59-2.46-.59s-1.5.57-2.43.61c-.97.04-1.71-.98-2.34-1.89-1.28-1.85-2.25-5.22-.94-7.49.65-1.13 1.82-1.85 3.09-1.87.96-.02 1.87.65 2.46.65.59 0 1.7-.8 2.86-.68.49.02 1.86.2 2.74 1.5-.07.04-1.64.95-1.63 2.82ZM14.87 5.94c.52-.63.88-1.51.78-2.39-.75.03-1.66.5-2.2 1.13-.48.56-.9 1.45-.79 2.3.84.06 1.68-.43 2.21-1.04Z"
+                />
+              </svg>
+              <span class="action-label">iOS</span>
+            </span>
+            <span class="action-title">iOS icin indir</span>
             <span class="action-copy">SoRita iPhone surumunu dogrudan App Store uzerinden ac.</span>
           </a>
 
-          <a class="action" href="../index.html">
-            <span class="action-label">Web</span>
-            <span class="action-title">Ana sayfaya gec</span>
-            <span class="action-copy">GitHub Pages uzerindeki SoRita tanitim ve bilgi sayfalarini ac.</span>
-          </a>
+          <div class="action action-disabled" aria-disabled="true">
+            <span class="action-row">
+              <svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M3.61 2.99 13.8 13.18l3.51-3.51L3.61 2.99Zm14.84 7.33-3.48 3.48 3.48 3.48c1.44-.79 2.43-1.98 2.43-3.48 0-1.5-.99-2.69-2.43-3.48ZM2.99 3.61A3.42 3.42 0 0 0 2 6v12c0 1.01.39 1.92 1.03 2.61l9.87-9.87L2.99 3.61Zm11.18 11.18-9.88 9.88A3.39 3.39 0 0 0 6 22l11.26-6.5-3.09-3.09Z"
+                />
+              </svg>
+              <span class="action-label">Android</span>
+            </span>
+            <span class="action-title">Android icin indir</span>
+            <span class="action-copy">Pek yakinda Play Store'da.</span>
+          </div>
 
           <p class="footnote">
             Bu sayfa GitHub Pages yayinina uygundur ve paylasilan linkler icin sabit hedef olarak kullanilir.
           </p>
+          <a class="home-link" href="../index.html">GitHub Pages ana sayfasina gec</a>
         </section>
       </section>
     </main>
