@@ -11,7 +11,7 @@
     <meta property="og:title" content="SoRita | Sosyal Harita" />
     <meta
       property="og:description"
-      content="SoRita iOS surumunu indir, Android surumu icin Play Store yayinini takip et."
+      content="SoRita iOS veya Android surumunu indir."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://cayankuzu.github.io/SoRita_web/download/" />
@@ -220,6 +220,11 @@
         pointer-events: none;
       }
 
+      .card-cta.card-cta-secondary {
+        background: #e7ebf3;
+        color: #214f94;
+      }
+
       .cta-icon {
         width: 20px;
         height: 20px;
@@ -264,8 +269,8 @@
           <p class="eyebrow">Paylasilan baglanti</p>
           <h1>SoRita'yi indir.</h1>
           <p class="lead">
-            Uygulamadan paylasilan baglanti buraya iner. Buradan iOS surumunu acabilir,
-            Android surumu icin Play Store yayininin yaklasmasini takip edebilirsin.
+            Uygulamadan paylasilan baglanti buraya iner. Buradan iOS veya Android
+            surumunu indirebilirsin.
           </p>
 
           <div class="link-card">
@@ -285,15 +290,20 @@
                 </svg>
                 <span>iOS icin indir</span>
               </a>
-              <span class="card-cta disabled">
+              <a
+                class="card-cta card-cta-secondary"
+                href="https://play.google.com/store/apps/details?id=com.cayan.sorita.socialmapsers"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <svg class="cta-icon" viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     fill="currentColor"
                     d="M3.61 2.99 13.8 13.18l3.51-3.51L3.61 2.99Zm14.84 7.33-3.48 3.48 3.48 3.48c1.44-.79 2.43-1.98 2.43-3.48 0-1.5-.99-2.69-2.43-3.48ZM2.99 3.61A3.42 3.42 0 0 0 2 6v12c0 1.01.39 1.92 1.03 2.61l9.87-9.87L2.99 3.61Zm11.18 11.18-9.88 9.88A3.39 3.39 0 0 0 6 22l11.26-6.5-3.09-3.09Z"
                   />
                 </svg>
-                <span>Pek yakinda Play Store'da</span>
-              </span>
+                <span>Android icin indir</span>
+              </a>
             </div>
           </div>
         </article>
