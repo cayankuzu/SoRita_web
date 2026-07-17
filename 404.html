@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SoRita yonlendiriliyor</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at top, rgba(14, 165, 233, 0.12), transparent 34%),
+          linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
+        color: #0f172a;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      main {
+        width: min(460px, calc(100% - 32px));
+        box-sizing: border-box;
+        padding: 28px 24px;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.94);
+        border: 1px solid rgba(148, 163, 184, 0.18);
+        box-shadow: 0 24px 80px rgba(15, 23, 42, 0.12);
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: 30px;
+        line-height: 1.1;
+      }
+
+      p {
+        margin: 0;
+        color: #475569;
+        font-size: 16px;
+        line-height: 1.55;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      a {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 18px;
+        border-radius: 14px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .primary {
+        background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+        color: #ffffff;
+      }
+
+      .secondary {
+        color: #0f172a;
+        background: rgba(226, 232, 240, 0.44);
+      }
+
+      .meta {
+        margin-top: 16px;
+        font-size: 13px;
+        color: #64748b;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 id="title">Baglanti uygulamada aciliyor</h1>
+      <p id="message">
+        Bu sayfa, paylasilan SoRita baglantilarini uygulamaya tasimak icin kullaniliyor.
+      </p>
+      <div class="actions">
+        <a id="open-app" class="primary" href="/SoRita_web/download/">Uygulamayi ac</a>
+        <a class="secondary" href="/SoRita_web/download/">Indirme sayfasi</a>
+      </div>
+      <div id="meta" class="meta">Yol analiz ediliyor...</div>
+    </main>
+    <script>
+      (function () {
+        var pathname = window.location.pathname.replace(/\/+$/, "");
+        var parts = pathname.split("/").filter(Boolean);
+        var params = new URLSearchParams(window.location.search);
+        var meta = document.getElementById("meta");
+        var title = document.getElementById("title");
+        var message = document.getElementById("message");
+        var button = document.getElementById("open-app");
+        var downloadUrl = "/SoRita_web/download/";
+        var appUrl = "";
+
+        if (parts.length >= 3 && parts[0] === "SoRita_web" && parts[1] === "lists") {
+          var listId = parts.slice(2).join("/");
+          appUrl = "sorita://lists/" + encodeURIComponent(listId);
+
+          var placeId = params.get("placeId");
+          if (placeId) {
+            appUrl += "?placeId=" + encodeURIComponent(placeId);
+          }
+
+          meta.textContent = "Liste kimligi: " + listId;
+        } else {
+          title.textContent = "Sayfa bulunamadi";
+          message.textContent =
+            "Istenen SoRita baglantisi taninamadi. Indirme sayfasina yonlendirileceksiniz.";
+          meta.textContent = pathname || "/";
+        }
+
+        if (!appUrl) {
+          button.textContent = "Indirme sayfasini ac";
+          button.setAttribute("href", downloadUrl);
+          return;
+        }
+
+        button.setAttribute("href", appUrl);
+
+        window.setTimeout(function () {
+          window.location.assign(appUrl);
+        }, 250);
+
+        window.setTimeout(function () {
+          if (!document.hidden) {
+            window.location.replace(downloadUrl);
+          }
+        }, 1600);
+      })();
+    </script>
+  </body>
+</html>
