@@ -1,17 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta http-equiv="refresh" content="0; url=../download/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SoRita | Yonlendiriliyor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SoRita | Yönlendiriliyor</title>
+    <link rel="icon" type="image/png" href="../assets/sorita-app-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css?v=20260826" />
     <script>
-      const query = window.location.search || "";
-      const hash = window.location.hash || "";
-      window.location.replace(`../download/${query}${hash}`);
+      var query = window.location.search || "";
+      var hash = window.location.hash || "";
+      window.location.replace("../download/" + query + hash);
     </script>
   </head>
-  <body>
-    <p>Yonlendiriliyor...</p>
+  <body class="page-gateway" data-design-version="sorita-v3-2026-08-26">
+    <div class="site-shell gateway-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="../" aria-label="SoRita ana sayfa">
+          <img class="brand-icon" src="../assets/sorita-app-icon.png" alt="" width="44" height="44" />
+          <span class="brand-text">SoRita</span>
+        </a>
+        <a class="button button-primary" href="../download/">İndir <span aria-hidden="true">↗</span></a>
+      </header>
+      <main class="gateway-main">
+        <article class="gateway-card" aria-labelledby="title">
+          <div class="gateway-card-header">
+            <div class="gateway-brand">
+              <img src="../assets/sorita-app-icon.png" alt="" width="44" height="44" />
+              <span>SoRita</span>
+            </div>
+            <span class="status-icon" aria-hidden="true">↗</span>
+          </div>
+          <div class="gateway-copy">
+            <h1 id="title">İndirme sayfasına yönlendiriliyorsunuz…</h1>
+            <p>Eski hikâye bağlantısı korunarak SoRita indirme sayfasına aktarılıyor.</p>
+          </div>
+          <div class="gateway-actions">
+            <a class="button button-primary" href="../download/">İndirme sayfasını aç</a>
+          </div>
+          <div class="gateway-meta">Bağlantı yönlendiriliyor…</div>
+        </article>
+      </main>
+    </div>
   </body>
 </html>

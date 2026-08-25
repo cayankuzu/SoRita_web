@@ -4,15 +4,20 @@ Bu klasor, GitHub Pages veya benzeri bir statik hosting uzerine yuklenebilecek h
 
 ## Dosyalar
 
-- `index.html`: tanitim ve guven odakli ana sayfa
-- `download/index.html`: paylasilan linklerin indirme hedef sayfasi
+- `index.html`: Figma V3 tasarimini uygulayan minimal urun landing sayfasi
+- `assets/`: resmi uygulama ikonu, gercek Home/Explore/Profile ekranlari ve resmi magaza rozetleri
+- `download/index.html`: iOS ve Android magaza hedefleri
+- `lists/index.html`: paylasilan liste baglantilarini uygulamaya aktaran handoff sayfasi
+- `auth/callback/index.html`: kimlik dogrulama deep-link handoff sayfasi
+- `reset-password/index.html`: sifre sifirlama deep-link handoff sayfasi
+- `404.html`: legacy liste baglantisi ve bilinmeyen rota durumlari
 - `gizlilik.html`: gizlilik politikasi
 - `kvkk.html`: KVKK aydinlatma metni
 - `cocuk-guvenligi.html`: cocuk guvenligi sayfasi
 - `kullanim-kosullari.html`: kullanim kosullari
 - `story/index.html`: eski hikaye linklerini `download/` sayfasina yonlendiren uyumluluk sayfasi
-- `styles.css`: tum stiller
-- `main.js`: basit reveal animasyonlari
+- `styles.css`: ortak Figma V3 tokenlari, responsive ekran sistemi ve route-state stilleri
+- `main.js`: erisilebilir Home/Explore/Profile mockup karuseli
 
 ## GitHub Pages yayinlama
 

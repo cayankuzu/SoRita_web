@@ -1,264 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SoRita | Güvenli ve Şeffaf Sosyal Harita Deneyimi</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SoRita | Sosyal Haritanı Oluştur</title>
     <meta
       name="description"
-      content="SoRita için modern, sade ve güven odaklı tanıtım sitesi. Gizlilik, KVKK, çocuk güvenliği ve kullanım ilkeleri tek yerde."
+      content="SoRita ile favori mekânlarını listele, paylaş ve başkalarının önerileriyle yeni yerler keşfet."
     />
+    <meta property="og:title" content="SoRita | Sosyal Harita" />
+    <meta
+      property="og:description"
+      content="Sosyal haritanı oluştur, mekânlarını paylaş."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://cayankuzu.github.io/SoRita_web/" />
+    <meta property="og:image" content="https://cayankuzu.github.io/SoRita_web/assets/sorita-app-icon.png" />
+    <link rel="icon" type="image/png" href="assets/sorita-app-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Sora:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="styles.css?v=20260826" />
+    <script defer src="main.js?v=20260826"></script>
   </head>
-  <body class="page-home">
-    <div class="background-glow background-glow-left"></div>
-    <div class="background-glow background-glow-right"></div>
+  <body class="page-home" data-design-version="sorita-v3-2026-08-26">
     <div class="site-shell">
-      <header class="topbar">
-        <a class="brand" href="index.html" aria-label="SoRita ana sayfa">
-          <span class="brand-mark">S</span>
+      <header class="topbar site-header">
+        <a class="brand" href="./" aria-label="SoRita ana sayfa">
+          <img class="brand-icon" src="assets/sorita-app-icon.png" alt="" width="44" height="44" />
           <span class="brand-text">SoRita</span>
         </a>
         <nav class="nav" aria-label="Ana gezinme">
-          <a href="#neden">Yaklaşım</a>
-          <a href="#guven">Güvenlik</a>
-          <a href="#belgeler">Belgeler</a>
-          <a href="#sss">SSS</a>
+          <a href="#uygulama">Uygulama</a>
+          <a href="gizlilik.html">Gizlilik</a>
+          <a href="kvkk.html">KVKK</a>
+          <a class="button button-primary nav-cta" href="download/">İndir <span aria-hidden="true">↗</span></a>
         </nav>
-        <a class="button button-ghost" href="#belgeler">Politikaları incele</a>
       </header>
 
       <main>
-        <section class="hero grid-two">
-          <div class="hero-copy" data-reveal>
-            <p class="eyebrow">Sosyal harita deneyimi için tasarlandı</p>
-            <h1>Daha güvenli, daha şeffaf ve daha kontrollü bir sosyal keşif deneyimi.</h1>
-            <p class="lead">
-              SoRita; kullanıcıların mekan keşfettiği, listeler oluşturduğu, fotoğraf paylaştığı ve birbirini takip
-              ettiği bir ürünü sunarken gizlilik, KVKK uyumu ve çocuk güvenliğini ürün tasarımının merkezine koyar.
+        <section class="landing-hero content-width" aria-labelledby="hero-title">
+          <p class="eyebrow hero-eyebrow">Harita tabanlı sosyal keşif</p>
+          <h1 id="hero-title">Sosyal haritanı oluştur, <br />mekânlarını paylaş.</h1>
+          <p class="hero-lead">
+            Harita tabanlı sosyal mekân keşfetme mobil uygulaması. Favori mekânlarını listele,
+            paylaş ve başkalarının önerileriyle yeni yerler keşfet.
+          </p>
+          <div class="store-badges" role="group" aria-label="SoRita mağaza bağlantıları">
+            <a
+              class="store-badge store-badge-apple"
+              href="https://apps.apple.com/tr/app/sorita-app/id6762198781?l=tr"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="SoRita'yı App Store'dan indir"
+            >
+              <img src="assets/app-store-badge.png" alt="App Store'dan indirin" width="151" height="40" />
+            </a>
+            <a
+              class="store-badge store-badge-google"
+              href="https://play.google.com/store/apps/details?id=com.cayan.sorita.socialmap"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="SoRita'yı Google Play'den indir"
+            >
+              <img src="assets/google-play-badge.png" alt="Google Play'den indirin" width="124" height="48" />
+            </a>
+          </div>
+          <p class="hero-caption">Resmî uygulama ikonu ve yayımlanmış mağaza ekranları.</p>
+        </section>
+
+        <section class="showcase-section content-width" id="uygulama" aria-labelledby="showcase-heading">
+          <div class="showcase-heading">
+            <h2 id="showcase-heading">Uygulamayı olduğu gibi görün.</h2>
+            <p>
+              Bu alan gerçek SoRita ekranlarından oluşur. Ekranlar otomatik değişir; tıklayınca canlı
+              Figma Make mockup’ı açılır.
             </p>
-            <div class="hero-actions">
-              <a class="button" href="#belgeler">Yasal belgeleri aç</a>
-              <a class="button button-secondary" href="#guven">Güven yaklaşımını gör</a>
+          </div>
+
+          <div
+            class="mock-showcase"
+            data-mock-carousel
+            data-mock-url="https://www.figma.com/make/xFI0Mxo8e6GdMVNfWu0eSm/SoRita?code-node-id=0-9&amp;p=f&amp;t=g4A02qO4GVxoXMh5-0&amp;fullscreen=1"
+            tabindex="0"
+            role="group"
+            aria-roledescription="otomatik ekran vitrini"
+            aria-label="Gerçek SoRita uygulama ekranları"
+          >
+            <a
+              class="mock-showcase-link"
+              href="https://www.figma.com/make/xFI0Mxo8e6GdMVNfWu0eSm/SoRita?code-node-id=0-9&amp;p=f&amp;t=g4A02qO4GVxoXMh5-0&amp;fullscreen=1"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Canlı SoRita Figma Make mockup'ını aç"
+            ></a>
+
+            <div class="mock-copy" aria-live="polite">
+              <p class="eyebrow">Gerçek uygulama ekranı</p>
+              <h3 data-mock-title>Ana Sayfa</h3>
+              <p data-mock-subtitle>Mekân ve liste akışı</p>
             </div>
-            <ul class="hero-tags" aria-label="Öne çıkan başlıklar">
-              <li>Gizlilik odaklı</li>
-              <li>Konum hassasiyeti</li>
-              <li>Çocuk güvenliği yaklaşımı</li>
-            </ul>
-          </div>
 
-          <div class="hero-panel" data-reveal>
-            <div class="glass-card signal-card">
-              <p class="signal-label">Son güncelleme</p>
-              <p class="signal-value">14 Nisan 2026</p>
-              <p class="signal-copy">Web metinleri, SoRita içindeki hesap, liste, mekan ve güvenlik akışlarıyla hizalı olacak şekilde hazırlandı.</p>
+            <div class="phone-frame" aria-hidden="true">
+              <img
+                data-mock-image
+                src="assets/screen-home.png"
+                alt=""
+                width="375"
+                height="812"
+              />
+              <span class="phone-sensor"></span>
             </div>
-            <div class="glass-card mini-grid">
-              <article>
-                <span>01</span>
-                <h2>Veri minimizasyonu</h2>
-                <p>İhtiyaç olmayan alanları toplamamaya ve görünürlüğü bağlama göre sınırlamaya odaklanırız.</p>
-              </article>
-              <article>
-                <span>02</span>
-                <h2>Topluluk güvenliği</h2>
-                <p>Raporlama, engelleme ve hesap güvenliği akışları ürünün temel parçasıdır.</p>
-              </article>
-              <article>
-                <span>03</span>
-                <h2>Şeffaf dokümantasyon</h2>
-                <p>Kullanıcıların hangi verinin neden işlendiğini anlayabilmesi için sade dil kullanırız.</p>
-              </article>
-              <article>
-                <span>04</span>
-                <h2>Konum odaklı deneyim</h2>
-                <p>İzinler, oturum güvenliği ve veri görünürlüğü harita ve keşif davranışlarıyla uyumludur.</p>
-              </article>
+
+            <div class="screen-selector" role="tablist" aria-label="Gösterilen uygulama ekranı">
+              <button class="is-active" type="button" role="tab" aria-selected="true" data-mock-screen="home">
+                Ana Sayfa
+              </button>
+              <button type="button" role="tab" aria-selected="false" data-mock-screen="explore">Keşfet</button>
+              <button type="button" role="tab" aria-selected="false" data-mock-screen="profile">Profil</button>
             </div>
-          </div>
-        </section>
 
-        <section class="stats-row" data-reveal>
-          <article class="stat-card">
-            <p class="stat-value">4</p>
-            <p class="stat-label">temel güven başlığı</p>
-          </article>
-          <article class="stat-card">
-            <p class="stat-value">2026.04</p>
-            <p class="stat-label">doküman sürümü</p>
-          </article>
-          <article class="stat-card">
-            <p class="stat-value">1</p>
-            <p class="stat-label">tek merkezde yasal görünüm</p>
-          </article>
-        </section>
-
-        <section class="section grid-two" id="neden">
-          <div class="section-heading" data-reveal>
-            <p class="eyebrow">Yaklaşım</p>
-            <h2>Ürün hissi kadar güven hissi de önemli.</h2>
-            <p>
-              SoRita yalnızca bir keşif yüzeyi sunmaz; kullanıcıların verileri, görünürlük tercihleri ve platform
-              güvenliği hakkında açık bir çerçeve görmesini hedefler.
-            </p>
-          </div>
-          <div class="card-stack" data-reveal>
-            <article class="feature-card">
-              <h3>Görünürlük bağlama göre yönetilir</h3>
-              <p>
-                Bir bilginin toplanması, herkese açık olduğu anlamına gelmez. Profil tipi, takip ilişkisi,
-                engelleme durumu ve içerik kuralı birlikte değerlendirilir.
-              </p>
-            </article>
-            <article class="feature-card">
-              <h3>İzinler özellik bazında ele alınır</h3>
-              <p>
-                Bildirim, medya ve konum izinleri yalnızca ilgili deneyim için istenir; tüm uygulama deneyimi tek
-                bir izne bağlı hale getirilmez.
-              </p>
-            </article>
-            <article class="feature-card">
-              <h3>Moderasyon sonradan eklenmiş bir katman değildir</h3>
-              <p>
-                Raporlama, kötüye kullanım tespiti ve hesap kısıtlama mekanizmaları topluluğun sürdürülebilirliği
-                için temel akışların parçasıdır.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="guven">
-          <div class="section-heading centered" data-reveal>
-            <p class="eyebrow">Güvenlik ve sorumluluk</p>
-            <h2>Basit anlatım, ciddi yaklaşım.</h2>
-            <p>
-              Aşağıdaki başlıklar, SoRita içindeki güvenlik ve uyum yaklaşımının kısa özeti olarak düşünülmelidir.
-            </p>
-          </div>
-
-          <div class="feature-grid">
-            <article class="feature-panel" data-reveal>
-              <h3>Gizlilik</h3>
-              <p>Hesap, profil, takip, liste, mekan ve medya akışlarında hangi bilgilerin ne amaçla işlendiği açıkça tanımlanır.</p>
-            </article>
-            <article class="feature-panel" data-reveal>
-              <h3>KVKK</h3>
-              <p>Veri kategorileri, hukuki sebepler, aktarım alıcıları ve ilgili kişi hakları ayrı bir çerçeve içinde sunulur.</p>
-            </article>
-            <article class="feature-panel" data-reveal>
-              <h3>Çocuk güvenliği</h3>
-              <p>Platform çocuklara yönelik değildir; yaş uygunluğu, raporlama ve hızlı müdahale politikaları görünür şekilde belirtilir.</p>
-            </article>
-            <article class="feature-panel" data-reveal>
-              <h3>Topluluk kuralları</h3>
-              <p>Taciz, tehdit, nefret söylemi, kimlik taklidi, spam ve güvenlik istismarı gibi davranışlar net biçimde yasaklanır.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section spotlight" data-reveal>
-          <div>
-            <p class="eyebrow">Çocuk güvenliği</p>
-            <h2>Çocuklara yönelik bir ürün değil; bu yüzden sınırlar açık.</h2>
-          </div>
-          <div class="spotlight-copy">
-            <p>
-              SoRita, yetişkin kullanıcıların sosyal keşif ve paylaşım deneyimi için kurgulanmıştır. Yerel mevzuat
-              uyarınca gerekli ebeveyn ya da temsilci onayı olmaksızın hesap kullanılmaması beklenir.
-            </p>
-            <p>
-              Taciz, cinsel içerikli yaklaşım, grooming, tehdit, doxxing ve hedef gösterme gibi ihlallerde içerik
-              kaldırma, hesap kısıtlama ve resmi mercilerle iş birliği dahil olmak üzere hızlı aksiyon prensibi
-              uygulanır.
-            </p>
-            <a class="button button-secondary" href="cocuk-guvenligi.html">Çocuk güvenliği sayfasını aç</a>
-          </div>
-        </section>
-
-        <section class="section" id="belgeler">
-          <div class="section-heading" data-reveal>
-            <p class="eyebrow">Belgeler</p>
-            <h2>Yayına hazır yasal sayfalar.</h2>
-            <p>Bu sayfalar, sade bir kamusal yüz sunarken uygulama içindeki metinlerle uyumlu bir temel oluşturur.</p>
-          </div>
-
-          <div class="document-grid">
-            <a class="document-card" href="gizlilik.html" data-reveal>
-              <span class="document-kicker">Belge 01</span>
-              <h3>Gizlilik Politikası</h3>
-              <p>Hangi verilerin hangi ürün akışlarında işlendiğini ve kullanıcının hangi kontrol alanlarına sahip olduğunu açıklar.</p>
+            <a
+              class="mock-cta"
+              href="https://www.figma.com/make/xFI0Mxo8e6GdMVNfWu0eSm/SoRita?code-node-id=0-9&amp;p=f&amp;t=g4A02qO4GVxoXMh5-0&amp;fullscreen=1"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Canlı mockup’ı aç <span aria-hidden="true">↗</span>
             </a>
-            <a class="document-card" href="kvkk.html" data-reveal>
-              <span class="document-kicker">Belge 02</span>
-              <h3>KVKK Aydınlatma Metni</h3>
-              <p>Veri kategorilerini, hukuki sebepleri, aktarım alıcılarını ve ilgili kişi haklarını özetler.</p>
-            </a>
-            <a class="document-card" href="cocuk-guvenligi.html" data-reveal>
-              <span class="document-kicker">Belge 03</span>
-              <h3>Çocuk Güvenliği</h3>
-              <p>Yaş uygunluğu, raporlama mekanizması, hızlı müdahale ilkeleri ve güvenlik sınırlarını görünür kılar.</p>
-            </a>
-            <a class="document-card" href="kullanim-kosullari.html" data-reveal>
-              <span class="document-kicker">Belge 04</span>
-              <h3>Kullanım Koşulları</h3>
-              <p>Topluluk kurallarını, hesap sorumluluklarını, moderasyon yapısını ve yaptırımları tanımlar.</p>
-            </a>
-          </div>
-        </section>
-
-        <section class="section faq-section" id="sss">
-          <div class="section-heading" data-reveal>
-            <p class="eyebrow">Sık sorulanlar</p>
-            <h2>Temel sorulara kısa cevaplar.</h2>
-          </div>
-          <div class="faq-list" data-reveal>
-            <details open>
-              <summary>Bu site resmi hukuki danışmanlık yerine geçer mi?</summary>
-              <p>Hayır. Bu içerikler kamusal bilgilendirme amacıyla hazırlanmış bir temel sunar; yayına almadan önce hukuk danışmanıyla gözden geçirilmesi önerilir.</p>
-            </details>
-            <details>
-              <summary>İletişim kanalı nasıl belirtilmeli?</summary>
-              <p>Guncel bilgi ve paylasim sayfasi olarak <a href="https://cayankuzu.github.io/SoRita_web/">https://cayankuzu.github.io/SoRita_web/</a> kullanilmaktadir.</p>
-            </details>
-            <details>
-              <summary>Bu yapı GitHub Pages için uygun mu?</summary>
-              <p>Evet. Dosyalar tamamen statiktir; doğrudan GitHub Pages, Cloudflare Pages veya Netlify üzerinde yayınlanabilir.</p>
-            </details>
-            <details>
-              <summary>Mobil uygulamadaki metinlerle uyumlu mu?</summary>
-              <p>Evet. İçerik, uygulamadaki mevcut gizlilik, KVKK ve kullanım koşulları akışlarından türetilmiş daha okunabilir bir web yüzeyi sunar.</p>
-            </details>
           </div>
         </section>
       </main>
 
-      <footer class="footer">
-        <div>
-          <a class="brand brand-footer" href="index.html">
-            <span class="brand-mark">S</span>
+      <footer class="footer site-footer">
+        <div class="footer-brand-block">
+          <a class="brand brand-footer" href="./" aria-label="SoRita ana sayfa">
+            <img class="brand-icon" src="assets/sorita-app-icon.png" alt="" width="44" height="44" />
             <span class="brand-text">SoRita</span>
           </a>
-          <p>Sosyal harita deneyimi için güven, görünürlük ve şeffaflık temelli kamusal yüz.</p>
+          <p>Harita tabanlı sosyal mekân keşfetme uygulaması.</p>
         </div>
-        <div class="footer-links">
+        <nav class="footer-links" aria-label="Yasal bağlantılar">
           <a href="gizlilik.html">Gizlilik</a>
           <a href="kvkk.html">KVKK</a>
           <a href="cocuk-guvenligi.html">Çocuk Güvenliği</a>
           <a href="kullanim-kosullari.html">Kullanım Koşulları</a>
-        </div>
-        <div class="footer-note">
-          <p>Sürüm 2026.04</p>
-          <p>Son güncelleme: 14 Nisan 2026</p>
-          <p>GitHub Pages: <a href="https://cayankuzu.github.io/SoRita_web/">cayankuzu.github.io/SoRita_web</a></p>
-        </div>
+        </nav>
+        <a class="footer-url" href="https://cayankuzu.github.io/SoRita_web/">
+          cayankuzu.github.io/SoRita_web
+        </a>
       </footer>
     </div>
   </body>

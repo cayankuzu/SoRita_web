@@ -3,94 +3,71 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SoRita yonlendiriliyor</title>
-    <style>
-      :root {
-        color-scheme: light;
-      }
-
-      body {
-        min-height: 100vh;
-        margin: 0;
-        display: grid;
-        place-items: center;
-        background:
-          radial-gradient(circle at top, rgba(14, 165, 233, 0.12), transparent 34%),
-          linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
-        color: #0f172a;
-        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
-
-      main {
-        width: min(460px, calc(100% - 32px));
-        box-sizing: border-box;
-        padding: 28px 24px;
-        border-radius: 24px;
-        background: rgba(255, 255, 255, 0.94);
-        border: 1px solid rgba(148, 163, 184, 0.18);
-        box-shadow: 0 24px 80px rgba(15, 23, 42, 0.12);
-      }
-
-      h1 {
-        margin: 0 0 10px;
-        font-size: 30px;
-        line-height: 1.1;
-      }
-
-      p {
-        margin: 0;
-        color: #475569;
-        font-size: 16px;
-        line-height: 1.55;
-      }
-
-      .actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 24px;
-      }
-
-      a {
-        display: inline-flex;
-        min-height: 48px;
-        align-items: center;
-        justify-content: center;
-        padding: 0 18px;
-        border-radius: 14px;
-        text-decoration: none;
-        font-weight: 700;
-      }
-
-      .primary {
-        background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
-        color: #ffffff;
-      }
-
-      .secondary {
-        color: #0f172a;
-        background: rgba(226, 232, 240, 0.44);
-      }
-
-      .meta {
-        margin-top: 16px;
-        font-size: 13px;
-        color: #64748b;
-      }
-    </style>
+    <title>SoRita yönlendiriliyor</title>
+    <meta name="description" content="SoRita bağlantısı analiz ediliyor." />
+    <link rel="icon" type="image/png" href="/SoRita_web/assets/sorita-app-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/SoRita_web/styles.css?v=20260826" />
   </head>
-  <body>
-    <main>
-      <h1 id="title">Baglanti uygulamada aciliyor</h1>
-      <p id="message">
-        Bu sayfa, paylasilan SoRita baglantilarini uygulamaya tasimak icin kullaniliyor.
-      </p>
-      <div class="actions">
-        <a id="open-app" class="primary" href="/SoRita_web/download/">Uygulamayi ac</a>
-        <a class="secondary" href="/SoRita_web/download/">Indirme sayfasi</a>
-      </div>
-      <div id="meta" class="meta">Yol analiz ediliyor...</div>
-    </main>
+  <body class="page-not-found" data-design-version="sorita-v3-2026-08-26">
+    <div class="site-shell gateway-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/SoRita_web/" aria-label="SoRita ana sayfa">
+          <img class="brand-icon" src="/SoRita_web/assets/sorita-app-icon.png" alt="" width="44" height="44" />
+          <span class="brand-text">SoRita</span>
+        </a>
+        <nav class="nav" aria-label="Ana gezinme">
+          <a href="/SoRita_web/#uygulama">Uygulama</a>
+          <a href="/SoRita_web/gizlilik.html">Gizlilik</a>
+          <a href="/SoRita_web/kvkk.html">KVKK</a>
+          <a class="button button-primary nav-cta" href="/SoRita_web/download/">İndir <span aria-hidden="true">↗</span></a>
+        </nav>
+      </header>
+
+      <main class="gateway-main">
+        <article class="gateway-card" aria-labelledby="title">
+          <div class="gateway-card-header">
+            <div class="gateway-brand">
+              <img src="/SoRita_web/assets/sorita-app-icon.png" alt="" width="44" height="44" />
+              <span>SoRita</span>
+            </div>
+            <span id="status-icon" class="status-icon" aria-hidden="true">…</span>
+          </div>
+          <div class="gateway-copy" aria-live="polite">
+            <h1 id="title">Bağlantı uygulamada açılıyor</h1>
+            <p id="message">Bu sayfa, paylaşılan SoRita bağlantılarını uygulamaya taşımak için kullanılıyor.</p>
+          </div>
+          <div class="gateway-actions">
+            <a id="open-app" class="button button-primary" href="/SoRita_web/download/">Uygulamayı aç</a>
+            <a class="button button-secondary" href="/SoRita_web/download/">İndirme sayfası</a>
+          </div>
+          <div id="meta" class="gateway-meta" aria-live="polite">Yol analiz ediliyor…</div>
+        </article>
+      </main>
+
+      <footer class="footer site-footer gateway-footer">
+        <div class="footer-brand-block">
+          <a class="brand brand-footer" href="/SoRita_web/" aria-label="SoRita ana sayfa">
+            <img class="brand-icon" src="/SoRita_web/assets/sorita-app-icon.png" alt="" width="44" height="44" />
+            <span class="brand-text">SoRita</span>
+          </a>
+          <p>Harita tabanlı sosyal mekân keşfetme uygulaması.</p>
+        </div>
+        <nav class="footer-links" aria-label="Yasal bağlantılar">
+          <a href="/SoRita_web/gizlilik.html">Gizlilik</a>
+          <a href="/SoRita_web/kvkk.html">KVKK</a>
+          <a href="/SoRita_web/cocuk-guvenligi.html">Çocuk Güvenliği</a>
+          <a href="/SoRita_web/kullanim-kosullari.html">Kullanım Koşulları</a>
+        </nav>
+        <a class="footer-url" href="https://cayankuzu.github.io/SoRita_web/">cayankuzu.github.io/SoRita_web</a>
+      </footer>
+    </div>
+
     <script>
       (function () {
         var pathname = window.location.pathname.replace(/\/+$/, "");
@@ -100,6 +77,7 @@
         var title = document.getElementById("title");
         var message = document.getElementById("message");
         var button = document.getElementById("open-app");
+        var statusIcon = document.getElementById("status-icon");
         var downloadUrl = "/SoRita_web/download/";
         var appUrl = "";
 
@@ -112,16 +90,21 @@
             appUrl += "?placeId=" + encodeURIComponent(placeId);
           }
 
-          meta.textContent = "Liste kimligi: " + listId;
+          meta.textContent = "Liste kimliği: " + listId;
+          statusIcon.textContent = "↗";
         } else {
-          title.textContent = "Sayfa bulunamadi";
+          document.title = "SoRita | Sayfa bulunamadı";
+          title.textContent = "Sayfa bulunamadı";
           message.textContent =
-            "Istenen SoRita baglantisi taninamadi. Indirme sayfasina yonlendirileceksiniz.";
+            "İstenen SoRita bağlantısı tanınamadı. İndirme sayfasından uygulamaya devam edebilirsiniz.";
           meta.textContent = pathname || "/";
+          meta.setAttribute("data-tone", "error");
+          statusIcon.textContent = "×";
+          statusIcon.setAttribute("data-status", "error");
         }
 
         if (!appUrl) {
-          button.textContent = "Indirme sayfasini ac";
+          button.textContent = "İndirme sayfasını aç";
           button.setAttribute("href", downloadUrl);
           return;
         }

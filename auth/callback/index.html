@@ -4,49 +4,70 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SoRita açılıyor</title>
-    <style>
-      body {
-        min-height: 100vh;
-        margin: 0;
-        display: grid;
-        place-items: center;
-        background: #f8fafc;
-        color: #0f172a;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
-      main {
-        width: min(440px, calc(100% - 32px));
-        text-align: center;
-      }
-      h1 {
-        margin: 0 0 10px;
-        font-size: 28px;
-      }
-      p {
-        margin: 0 0 22px;
-        color: #475569;
-        line-height: 1.5;
-      }
-      a {
-        display: inline-flex;
-        min-height: 44px;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        background: #7c3aed;
-        color: white;
-        font-weight: 700;
-        padding: 0 18px;
-        text-decoration: none;
-      }
-    </style>
+    <meta name="description" content="SoRita kimlik doğrulama bağlantısını uygulamada aç." />
+    <link rel="icon" type="image/png" href="../../assets/sorita-app-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles.css?v=20260826" />
   </head>
-  <body>
-    <main>
-      <h1>SoRita açılıyor…</h1>
-      <p>Uygulama otomatik açılmazsa aşağıdaki butona bas.</p>
-      <a id="open-app" href="sorita://auth/callback">Uygulamayı aç</a>
-    </main>
+  <body class="page-gateway" data-design-version="sorita-v3-2026-08-26">
+    <div class="site-shell gateway-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="../../" aria-label="SoRita ana sayfa">
+          <img class="brand-icon" src="../../assets/sorita-app-icon.png" alt="" width="44" height="44" />
+          <span class="brand-text">SoRita</span>
+        </a>
+        <nav class="nav" aria-label="Ana gezinme">
+          <a href="../../#uygulama">Uygulama</a>
+          <a href="../../gizlilik.html">Gizlilik</a>
+          <a href="../../kvkk.html">KVKK</a>
+          <a class="button button-primary nav-cta" href="../../download/">İndir <span aria-hidden="true">↗</span></a>
+        </nav>
+      </header>
+
+      <main class="gateway-main">
+        <article class="gateway-card" aria-labelledby="title">
+          <div class="gateway-card-header">
+            <div class="gateway-brand">
+              <img src="../../assets/sorita-app-icon.png" alt="" width="44" height="44" />
+              <span>SoRita</span>
+            </div>
+            <span class="status-icon" aria-hidden="true">↗</span>
+          </div>
+          <div class="gateway-copy" aria-live="polite">
+            <h1 id="title">SoRita açılıyor…</h1>
+            <p>Kimlik doğrulama tamamlanıyor. Uygulama otomatik açılmazsa aşağıdaki düğmeye bas.</p>
+          </div>
+          <div class="gateway-actions">
+            <a id="open-app" class="button button-primary" href="sorita://auth/callback">Uygulamayı aç</a>
+            <a class="button button-secondary" href="../../download/">İndirme sayfası</a>
+          </div>
+          <div class="gateway-meta" aria-live="polite">Kimlik doğrulama bağlantısı hazırlanıyor…</div>
+        </article>
+      </main>
+
+      <footer class="footer site-footer gateway-footer">
+        <div class="footer-brand-block">
+          <a class="brand brand-footer" href="../../" aria-label="SoRita ana sayfa">
+            <img class="brand-icon" src="../../assets/sorita-app-icon.png" alt="" width="44" height="44" />
+            <span class="brand-text">SoRita</span>
+          </a>
+          <p>Harita tabanlı sosyal mekân keşfetme uygulaması.</p>
+        </div>
+        <nav class="footer-links" aria-label="Yasal bağlantılar">
+          <a href="../../gizlilik.html">Gizlilik</a>
+          <a href="../../kvkk.html">KVKK</a>
+          <a href="../../cocuk-guvenligi.html">Çocuk Güvenliği</a>
+          <a href="../../kullanim-kosullari.html">Kullanım Koşulları</a>
+        </nav>
+        <a class="footer-url" href="https://cayankuzu.github.io/SoRita_web/">cayankuzu.github.io/SoRita_web</a>
+      </footer>
+    </div>
+
     <script>
       (function () {
         function mergeParams() {

@@ -1,314 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SoRita | iOS ve Android</title>
     <meta
       name="description"
-      content="SoRita iOS ve Android indirme sayfasi. Uygulamadan paylasilan sabit baglanti bu sayfaya iner."
+      content="SoRita iOS ve Android indirme sayfası. Uygulamadan paylaşılan sabit bağlantı bu sayfaya iner."
     />
     <meta property="og:title" content="SoRita | Sosyal Harita" />
-    <meta
-      property="og:description"
-      content="SoRita iOS veya Android surumunu indir."
-    />
+    <meta property="og:description" content="SoRita iOS veya Android sürümünü indir." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://cayankuzu.github.io/SoRita_web/download/" />
+    <meta property="og:image" content="https://cayankuzu.github.io/SoRita_web/assets/sorita-app-icon.png" />
+    <link rel="icon" type="image/png" href="../assets/sorita-app-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        --blue: #3d7cff;
-        --green: #1ecf91;
-        --ink: #10233d;
-        --muted: #6c7a8f;
-        --line: rgba(19, 39, 68, 0.08);
-        --card: #f4f7fd;
-        --card-strong: #ffffff;
-        --bg: linear-gradient(180deg, #ffffff 0%, #f2f6ff 100%);
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        min-height: 100vh;
-        font-family: "Sora", sans-serif;
-        color: var(--ink);
-        background: var(--bg);
-      }
-
-      .shell {
-        width: min(100% - 32px, 760px);
-        margin: 0 auto;
-        padding: 28px 0 48px;
-      }
-
-      .brand {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        text-decoration: none;
-        color: inherit;
-        margin-bottom: 28px;
-      }
-
-      .brand-badge {
-        width: 46px;
-        height: 46px;
-        border-radius: 16px;
-        background: linear-gradient(135deg, var(--blue), var(--green));
-        color: #fff;
-        display: grid;
-        place-items: center;
-        font-weight: 800;
-      }
-
-      .brand-text {
-        font-size: 28px;
-        font-weight: 800;
-        letter-spacing: -0.03em;
-      }
-
-      .brand-text .so {
-        color: var(--blue);
-      }
-
-      .brand-text .rita {
-        color: var(--green);
-      }
-
-      .hero {
-        display: grid;
-        gap: 22px;
-      }
-
-      .panel {
-        border-radius: 28px;
-        background: rgba(255, 255, 255, 0.84);
-        border: 1px solid var(--line);
-        box-shadow: 0 22px 60px rgba(36, 67, 119, 0.08);
-      }
-
-      .intro {
-        padding: 28px;
-      }
-
-      .eyebrow {
-        margin: 0 0 10px;
-        font-size: 12px;
-        font-weight: 800;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: var(--muted);
-      }
-
-      h1 {
-        margin: 0;
-        font-size: clamp(34px, 7vw, 56px);
-        line-height: 1;
-        letter-spacing: -0.05em;
-      }
-
-      .lead {
-        margin: 14px 0 0;
-        max-width: 34rem;
-        color: var(--muted);
-        line-height: 1.7;
-      }
-
-      .link-card {
-        margin-top: 22px;
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        padding: 18px;
-        border-radius: 30px;
-        background: var(--card);
-        border: 1px solid rgba(19, 39, 68, 0.06);
-      }
-
-      .cover {
-        width: 88px;
-        height: 88px;
-        border-radius: 24px;
-        background: linear-gradient(135deg, var(--blue), var(--green));
-        overflow: hidden;
-        flex: 0 0 auto;
-      }
-
-      .cover img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
-
-      .card-copy {
-        flex: 1;
-        min-width: 0;
-      }
-
-      .card-brand {
-        margin: 0 0 8px;
-        font-size: 13px;
-        font-weight: 800;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-
-      .card-brand .so {
-        color: var(--blue);
-      }
-
-      .card-brand .rita {
-        color: var(--green);
-      }
-
-      .card-title {
-        margin: 0;
-        font-size: 28px;
-        font-weight: 800;
-        line-height: 1.05;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      .card-subtitle {
-        margin: 8px 0 0;
-        color: var(--muted);
-        font-size: 15px;
-        font-weight: 700;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      .card-cta {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        min-height: 62px;
-        padding: 18px 22px;
-        border-radius: 24px;
-        background: linear-gradient(135deg, #214f94, #153866);
-        color: #fff;
-        font-size: 16px;
-        font-weight: 800;
-        text-decoration: none;
-      }
-
-      .card-actions {
-        flex: 0 0 232px;
-        display: grid;
-        gap: 10px;
-      }
-
-      .card-cta.disabled {
-        background: #e7ebf3;
-        color: #7a889d;
-        cursor: default;
-        pointer-events: none;
-      }
-
-      .card-cta.card-cta-secondary {
-        background: #e7ebf3;
-        color: #214f94;
-      }
-
-      .cta-icon {
-        width: 20px;
-        height: 20px;
-        flex: 0 0 auto;
-      }
-
-      @media (max-width: 680px) {
-        .shell {
-          width: min(100% - 20px, 760px);
-          padding-top: 20px;
-        }
-
-        .intro {
-          padding: 22px;
-        }
-
-        .link-card {
-          flex-wrap: wrap;
-        }
-
-        .card-actions {
-          width: 100%;
-          flex-basis: 100%;
-        }
-
-        .card-cta {
-          width: 100%;
-          text-align: center;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="../styles.css?v=20260826" />
   </head>
-  <body>
-    <main class="shell">
-      <a class="brand" href="../index.html" aria-label="SoRita ana sayfa">
-        <span class="brand-badge">SR</span>
-        <span class="brand-text"><span class="so">So</span><span class="rita">Rita</span></span>
-      </a>
+  <body class="page-download" data-design-version="sorita-v3-2026-08-26">
+    <div class="site-shell gateway-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="../" aria-label="SoRita ana sayfa">
+          <img class="brand-icon" src="../assets/sorita-app-icon.png" alt="" width="44" height="44" />
+          <span class="brand-text">SoRita</span>
+        </a>
+        <nav class="nav" aria-label="Ana gezinme">
+          <a href="../#uygulama">Uygulama</a>
+          <a href="../gizlilik.html">Gizlilik</a>
+          <a href="../kvkk.html">KVKK</a>
+          <a class="button button-primary nav-cta" href="./" aria-current="page">İndir <span aria-hidden="true">↗</span></a>
+        </nav>
+      </header>
 
-      <section class="hero">
-        <article class="panel intro">
-          <p class="eyebrow">Paylasilan baglanti</p>
-          <h1>SoRita'yi indir.</h1>
-          <p class="lead">
-            Uygulamadan paylasilan baglanti buraya iner. Buradan iOS veya Android
-            surumunu indirebilirsin.
-          </p>
-
-          <div class="link-card">
-            <div class="cover"></div>
-            <div class="card-copy">
-              <p class="card-brand"><span class="so">So</span><span class="rita">Rita</span></p>
-              <h2 class="card-title">SoRita</h2>
-              <p class="card-subtitle">Sosyal Harita</p>
-            </div>
-            <div class="card-actions">
-              <a class="card-cta" href="https://apps.apple.com/tr/app/sorita-app/id6762198781?l=tr" target="_blank" rel="noreferrer">
-                <svg class="cta-icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    fill="currentColor"
-                    d="M16.64 13.02c.02 2.21 1.95 2.95 1.97 2.96-.02.05-.31 1.08-1.03 2.14-.62.91-1.28 1.82-2.29 1.84-1 .02-1.32-.59-2.46-.59s-1.5.57-2.43.61c-.97.04-1.71-.98-2.34-1.89-1.28-1.85-2.25-5.22-.94-7.49.65-1.13 1.82-1.85 3.09-1.87.96-.02 1.87.65 2.46.65.59 0 1.7-.8 2.86-.68.49.02 1.86.2 2.74 1.5-.07.04-1.64.95-1.63 2.82ZM14.87 5.94c.52-.63.88-1.51.78-2.39-.75.03-1.66.5-2.2 1.13-.48.56-.9 1.45-.79 2.3.84.06 1.68-.43 2.21-1.04Z"
-                  />
-                </svg>
-                <span>iOS icin indir</span>
-              </a>
-              <a
-                class="card-cta card-cta-secondary"
-                href="https://play.google.com/store/apps/details?id=com.cayan.sorita.socialmap"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg class="cta-icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    fill="currentColor"
-                    d="M3.61 2.99 13.8 13.18l3.51-3.51L3.61 2.99Zm14.84 7.33-3.48 3.48 3.48 3.48c1.44-.79 2.43-1.98 2.43-3.48 0-1.5-.99-2.69-2.43-3.48ZM2.99 3.61A3.42 3.42 0 0 0 2 6v12c0 1.01.39 1.92 1.03 2.61l9.87-9.87L2.99 3.61Zm11.18 11.18-9.88 9.88A3.39 3.39 0 0 0 6 22l11.26-6.5-3.09-3.09Z"
-                  />
-                </svg>
-                <span>Android icin indir</span>
-              </a>
-            </div>
+      <main class="download-main">
+        <article class="download-card" aria-labelledby="download-title">
+          <div>
+            <img
+              class="download-card-icon"
+              src="../assets/sorita-app-icon.png"
+              alt="SoRita uygulama ikonu"
+              width="88"
+              height="88"
+            />
+            <p class="eyebrow">Paylaşılan bağlantı</p>
+            <h1 id="download-title">SoRita’yı indir.</h1>
+            <p class="download-card-copy">
+              Uygulamadan paylaşılan bağlantı buraya iner. Buradan iOS veya Android sürümünü
+              indirebilirsin.
+            </p>
+          </div>
+          <div class="store-badges" role="group" aria-label="SoRita mağaza bağlantıları">
+            <a
+              class="store-badge store-badge-apple"
+              href="https://apps.apple.com/tr/app/sorita-app/id6762198781?l=tr"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="SoRita'yı App Store'dan indir"
+            >
+              <img src="../assets/app-store-badge.png" alt="App Store'dan indirin" width="151" height="40" />
+            </a>
+            <a
+              class="store-badge store-badge-google"
+              href="https://play.google.com/store/apps/details?id=com.cayan.sorita.socialmap"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="SoRita'yı Google Play'den indir"
+            >
+              <img src="../assets/google-play-badge.png" alt="Google Play'den indirin" width="124" height="48" />
+            </a>
           </div>
         </article>
+      </main>
 
-      </section>
-    </main>
+      <footer class="footer site-footer gateway-footer">
+        <div class="footer-brand-block">
+          <a class="brand brand-footer" href="../" aria-label="SoRita ana sayfa">
+            <img class="brand-icon" src="../assets/sorita-app-icon.png" alt="" width="44" height="44" />
+            <span class="brand-text">SoRita</span>
+          </a>
+          <p>Harita tabanlı sosyal mekân keşfetme uygulaması.</p>
+        </div>
+        <nav class="footer-links" aria-label="Yasal bağlantılar">
+          <a href="../gizlilik.html">Gizlilik</a>
+          <a href="../kvkk.html">KVKK</a>
+          <a href="../cocuk-guvenligi.html">Çocuk Güvenliği</a>
+          <a href="../kullanim-kosullari.html">Kullanım Koşulları</a>
+        </nav>
+        <a class="footer-url" href="https://cayankuzu.github.io/SoRita_web/">
+          cayankuzu.github.io/SoRita_web
+        </a>
+      </footer>
+    </div>
   </body>
 </html>
