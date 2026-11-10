@@ -32,3 +32,9 @@ Bu klasor, GitHub Pages veya benzeri bir statik hosting uzerine yuklenebilecek h
 - Kamusal yayin adresi olarak `https://cayankuzu.github.io/SoRita_web/` bilgisini kullan.
 - Gerekirse veri sorumlusu kimligini acik yaz.
 - Hukuki metinleri bir uzmanla son kez gozden gecir.
+
+## Destek ve hesap silme
+
+- `destek/`: destek e-postası (memode3333@gmail.com) ve sık sorulanlar. App Store Support URL'i bu sayfadır.
+- `hesap-silme/`: uygulamadan ve uygulama dışından hesap silme, silinen ve bir süre saklanan veriler. Google Play'in hesap silme URL'i bu sayfadır.
+- `vercel.json`: Vercel kopyası (https://sorita-web.vercel.app) kökte yayımlanır; GitHub Pages yolundaki `/SoRita_web/` önekli bağlantılar oraya yönlendirilir.

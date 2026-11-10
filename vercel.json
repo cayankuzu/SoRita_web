@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/SoRita_web/(.*)",
+      "destination": "/$1",
+      "permanent": false
+    },
+    {
+      "source": "/SoRita_web",
+      "destination": "/",
+      "permanent": false
+    }
+  ]
+}
